@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ThirstySoftRegular.otf">
+            <string>ThirstySoftRegular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k3N-Zd-AP6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="cax-KB-WlI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="iJO-1h-iyE">
+                                <rect key="frame" x="48.5" y="56" width="278" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="dMI-8d-y7S"/>
+                                    <constraint firstAttribute="height" constant="290" id="wOe-pv-xy7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgP-8N-0ic">
+                                <rect key="frame" x="128" y="614" width="119" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CgP-8N-0ic" secondAttribute="height" multiplier="119:33" id="joC-qW-cZj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cax-KB-WlI" secondAttribute="bottom" id="AvV-Gt-GK6"/>
+                            <constraint firstItem="iJO-1h-iyE" firstAttribute="centerX" secondItem="k3N-Zd-AP6" secondAttribute="centerX" id="EDf-K2-uJn"/>
+                            <constraint firstItem="cax-KB-WlI" firstAttribute="top" secondItem="k3N-Zd-AP6" secondAttribute="top" id="Oz3-7T-BN0"/>
+                            <constraint firstItem="iJO-1h-iyE" firstAttribute="top" secondItem="nhG-Nj-WVD" secondAttribute="top" constant="36" id="YN3-lJ-PaJ"/>
+                            <constraint firstItem="CgP-8N-0ic" firstAttribute="centerX" secondItem="k3N-Zd-AP6" secondAttribute="centerX" id="dtM-80-hvw"/>
+                            <constraint firstItem="nhG-Nj-WVD" firstAttribute="bottom" secondItem="CgP-8N-0ic" secondAttribute="bottom" constant="20" id="e0N-Vi-tVA"/>
+                            <constraint firstAttribute="trailing" secondItem="cax-KB-WlI" secondAttribute="trailing" id="vNr-AO-jRh"/>
+                            <constraint firstItem="cax-KB-WlI" firstAttribute="leading" secondItem="k3N-Zd-AP6" secondAttribute="leading" id="vgi-f3-iLc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nhG-Nj-WVD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="375" height="667"/>
+        <image name="Logo" width="278" height="290"/>
+    </resources>
+</document>

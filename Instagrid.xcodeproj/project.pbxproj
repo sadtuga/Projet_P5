@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A0264CF021C97EB4004A2E80 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A0264CEF21C97EB4004A2E80 /* Delm-Medium.otf */; };
 		A0264CF221C97EBE004A2E80 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A0264CF121C97EBE004A2E80 /* ThirstySoftRegular.otf */; };
+		A0264CF721C99358004A2E80 /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0264CF621C99358004A2E80 /* LayoutView.swift */; };
 		A079816421C9542100EE4769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079816321C9542100EE4769 /* AppDelegate.swift */; };
 		A079816621C9542100EE4769 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A079816521C9542100EE4769 /* ViewController.swift */; };
 		A079816921C9542100EE4769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A079816721C9542100EE4769 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		A0264CEF21C97EB4004A2E80 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Delm-Medium.otf"; path = "Assets/Delm-Medium.otf"; sourceTree = SOURCE_ROOT; };
 		A0264CF121C97EBE004A2E80 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThirstySoftRegular.otf; path = Assets/ThirstySoftRegular.otf; sourceTree = SOURCE_ROOT; };
+		A0264CF621C99358004A2E80 /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
 		A079816021C9542100EE4769 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A079816321C9542100EE4769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A079816521C9542100EE4769 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				A079816721C9542100EE4769 /* Main.storyboard */,
 				A079816C21C9542200EE4769 /* LaunchScreen.storyboard */,
+				A0264CF621C99358004A2E80 /* LayoutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			files = (
 				A079816621C9542100EE4769 /* ViewController.swift in Sources */,
 				A079816421C9542100EE4769 /* AppDelegate.swift in Sources */,
+				A0264CF721C99358004A2E80 /* LayoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

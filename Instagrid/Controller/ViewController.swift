@@ -10,11 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mainLayout: LayoutView!
+    @IBOutlet var layoutSelecter: [UIButton]!
+    
+    private var index: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        mainLayout.layout = .layoutOne
     }
-
+    
+    @IBAction func didTapeLayoutSelecter(_ sender: UIButton) {
+        switch sender {
+        case layoutSelecter[0]:
+            mainLayout.layout = .layoutOne
+        case layoutSelecter[1]:
+            mainLayout.layout = .layoutTwoo
+        case layoutSelecter[2]:
+            mainLayout.layout = .layoutThree
+        default:
+            print("erreur")
+        }
+    }
 
 }
 

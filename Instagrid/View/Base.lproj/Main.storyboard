@@ -32,6 +32,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrU-Nf-cyC" userLabel="Layout1">
                                 <rect key="frame" x="147.5" y="567" width="80" height="80"/>
                                 <state key="normal" backgroundImage="Layout 1"/>
+                                <connections>
+                                    <action selector="didTapeLayoutSelecter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TeF-fv-RtP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZS-zN-fVw" userLabel="Layout2">
                                 <rect key="frame" x="50" y="567" width="80" height="80"/>
@@ -52,10 +55,16 @@
                                         <include reference="sVi-VQ-5at"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="didTapeLayoutSelecter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMg-SK-XkW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hv2-c6-jiL" userLabel="Layout3">
                                 <rect key="frame" x="245" y="567" width="80" height="80"/>
                                 <state key="normal" backgroundImage="Layout 3"/>
+                                <connections>
+                                    <action selector="didTapeLayoutSelecter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y19-eT-0bH"/>
+                                </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="ruu-wo-8mR" userLabel="Selected1">
                                 <rect key="frame" x="147.5" y="567" width="80" height="80"/>
@@ -235,6 +244,25 @@
                                     <constraint firstAttribute="trailing" secondItem="USB-uQ-n6Q" secondAttribute="trailing" id="oa0-1d-NoY"/>
                                     <constraint firstAttribute="bottom" secondItem="USB-uQ-n6Q" secondAttribute="bottom" id="zVp-Ry-tnm"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="label" destination="E3U-Ja-mc3" id="Yjz-BF-TGq"/>
+                                    <outlet property="swipeImage" destination="j5g-yi-Nf3" id="5E8-RU-RcT"/>
+                                    <outletCollection property="selected" destination="ruu-wo-8mR" collectionClass="NSMutableArray" id="eZ5-9C-bXA"/>
+                                    <outletCollection property="selected" destination="unY-Hy-qFT" collectionClass="NSMutableArray" id="DPx-nA-ENq"/>
+                                    <outletCollection property="selected" destination="Uqp-Nj-hZK" collectionClass="NSMutableArray" id="Wie-27-aIn"/>
+                                    <outletCollection property="gridView" destination="rXY-Jv-i6F" collectionClass="NSMutableArray" id="NU8-EM-ANs"/>
+                                    <outletCollection property="gridView" destination="dNh-Lb-NR7" collectionClass="NSMutableArray" id="k2g-M6-VYM"/>
+                                    <outletCollection property="gridView" destination="LYo-BI-hKd" collectionClass="NSMutableArray" id="IsO-W5-KVS"/>
+                                    <outletCollection property="gridView" destination="Cu6-RD-8na" collectionClass="NSMutableArray" id="udp-WX-ygx"/>
+                                    <outletCollection property="gridButton" destination="arY-w7-kVm" collectionClass="NSMutableArray" id="xAp-ql-nLO"/>
+                                    <outletCollection property="gridButton" destination="Rzx-Ms-VSV" collectionClass="NSMutableArray" id="4C8-5X-EQx"/>
+                                    <outletCollection property="gridButton" destination="qec-Rt-yMn" collectionClass="NSMutableArray" id="Pqk-Tq-tKV"/>
+                                    <outletCollection property="gridButton" destination="dhE-zu-69O" collectionClass="NSMutableArray" id="pN0-yk-yc5"/>
+                                    <outletCollection property="gridImageView" destination="DQM-Ty-QGf" collectionClass="NSMutableArray" id="dT9-xO-UfN"/>
+                                    <outletCollection property="gridImageView" destination="pN0-b4-aQa" collectionClass="NSMutableArray" id="4nR-lw-8cj"/>
+                                    <outletCollection property="gridImageView" destination="4XB-Dw-Bpd" collectionClass="NSMutableArray" id="Gji-ER-jQT"/>
+                                    <outletCollection property="gridImageView" destination="t5X-zB-r8K" collectionClass="NSMutableArray" id="O2h-Yo-dhv"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fha-df-nDn">
                                 <rect key="frame" x="119.5" y="20" width="136" height="39"/>
@@ -479,6 +507,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="mainLayout" destination="Bfr-eF-vta" id="IiM-GZ-Fbp"/>
+                        <outletCollection property="layoutSelecter" destination="jrU-Nf-cyC" collectionClass="NSMutableArray" id="iJf-if-2wg"/>
+                        <outletCollection property="layoutSelecter" destination="JZS-zN-fVw" collectionClass="NSMutableArray" id="Z0F-3x-7rz"/>
+                        <outletCollection property="layoutSelecter" destination="Hv2-c6-jiL" collectionClass="NSMutableArray" id="PO7-PC-yst"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

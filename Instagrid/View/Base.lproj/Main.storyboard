@@ -122,6 +122,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arY-w7-kVm">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="129"/>
                                                                 <state key="normal" image="Plus"/>
+                                                                <connections>
+                                                                    <action selector="didTapeGridButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CPV-DL-0VN"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,6 +149,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzx-Ms-VSV">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="129"/>
                                                                 <state key="normal" image="Plus"/>
+                                                                <connections>
+                                                                    <action selector="didTapeGridButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="48u-oc-jFI"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,6 +181,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qec-Rt-yMn">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="129"/>
                                                                 <state key="normal" image="Plus"/>
+                                                                <connections>
+                                                                    <action selector="didTapeGridButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4OH-m6-RTd"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -199,6 +208,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-zu-69O">
                                                                 <rect key="frame" x="0.0" y="0.0" width="129" height="129"/>
                                                                 <state key="normal" image="Plus"/>
+                                                                <connections>
+                                                                    <action selector="didTapeGridButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RIp-9a-qp2"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -71,13 +71,13 @@ class LayoutView: UIView {
         switch layout {
         case .layoutOne:
             setGrid(layout)
-            setSelected(index: 0)
+            setSelected(index: 2)
         case .layoutTwoo:
             setGrid(layout)
-            setSelected(index: 1)
+            setSelected(index: 0)
         case .layoutThree:
             setGrid(layout)
-            setSelected(index: 2)
+            setSelected(index: 1)
         }
     }
     

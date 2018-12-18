@@ -18,6 +18,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPopov
     override func viewDidLoad() {
         super.viewDidLoad()
         mainLayout.layout = .layoutOne
+        
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(animationView(_:)))
+        mainLayout.addGestureRecognizer(panGestureRecognizer)
     }
     
     // Change the layout value according to the pressed button
@@ -96,6 +99,58 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPopov
         let ok = UIAlertAction(title: "OK", style:.default, handler: nil)
         alert.addAction(ok)
         present(alert, animated: true, completion: nil)
+    }
+    
+    // Animation management
+    @objc func animationView(_ sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .began, .changed:
+            dragView(gesture: sender)
+        case .cancelled, .ended:
+            resetView(gesture: sender)
+        default:
+            break
+        }
+    }
+    
+    // Returns the main view to its original position with an animation
+    private func resetView(gesture: UIPanGestureRecognizer) {
+        mainLayout.transform = .identity
+        mainLayout.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            self.mainLayout.transform = .identity
+        }, completion: nil)
+    }
+    
+    // Move the main view and call displayShareSheet when the view reaches a certain position
+    private func dragView(gesture: UIPanGestureRecognizer) {
+        let translation = gesture.translation(in: mainLayout)
+        let transform = CGAffineTransform(translationX: 0, y: translation.y)
+        mainLayout.transform = transform
+
+        if translation.y < -115 {
+            displayShareSheet()
+        }
+    }
+    
+    // Display a pop-up with different sharing options
+    private func displayShareSheet() {
+        let image = convert()
+        if image != nil {
+            let activityViewController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+            present(activityViewController, animated: true, completion: nil)
+        } else {
+            alert(title: "Erreur", massage: "Erreur l'or de la création de l'image")
+        }
+    }
+    
+    // Converted the main view to UIImage
+    func convert() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(mainLayout.layer.frame.size, false, 0.0)
+        mainLayout.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let viewImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return viewImage
     }
 }
 

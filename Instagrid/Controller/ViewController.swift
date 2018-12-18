@@ -19,8 +19,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPopov
         super.viewDidLoad()
         mainLayout.layout = .layoutOne
         
+        NotificationCenter.default.addObserver(self, selector: #selector(deviceOrientionDidChange), name: UIDevice.orientationDidChangeNotification, object: nil)
+        
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(animationView(_:)))
         mainLayout.addGestureRecognizer(panGestureRecognizer)
+    }
+    
+    // Call the setShareIndication method
+    @objc private func deviceOrientionDidChange() {
+        mainLayout.setShareIndication(orientation: UIDevice.current.orientation)
     }
     
     // Change the layout value according to the pressed button
@@ -125,11 +132,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPopov
     // Move the main view and call displayShareSheet when the view reaches a certain position
     private func dragView(gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: mainLayout)
-        let transform = CGAffineTransform(translationX: 0, y: translation.y)
-        mainLayout.transform = transform
-
-        if translation.y < -115 {
-            displayShareSheet()
+        
+        switch UIDevice.current.orientation {
+        case .portrait:
+            let transform = CGAffineTransform(translationX: 0, y: translation.y)
+            mainLayout.transform = transform
+            if translation.y < -115 {
+                displayShareSheet()
+            }
+        case .landscapeLeft ,.landscapeRight:
+            let transform = CGAffineTransform(translationX: translation.x, y: 0)
+            mainLayout.transform = transform
+            if translation.x < -115 {
+                displayShareSheet()
+            }
+        default:
+            break
         }
     }
     

@@ -101,4 +101,18 @@ class LayoutView: UIView {
     func hideButton(index: Int) {
         gridButton[index].setImage(nil, for: UIControl.State.normal)
     }
+    
+    // Modify the image and the label indicating in which way swipe
+    func setShareIndication(orientation: UIDeviceOrientation) {
+        switch orientation {
+        case .portrait:
+            swipeImage.image = #imageLiteral(resourceName: "Swipe Up")
+            label.text = "Swipe up to share"
+        case .landscapeLeft, .landscapeRight:
+            swipeImage.image = #imageLiteral(resourceName: "Swipe Left")
+            label.text = "Swipe left to share"
+        default:
+            break
+        }
+    }
 }

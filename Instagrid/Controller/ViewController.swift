@@ -129,7 +129,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPopov
         }, completion: nil)
     }
     
-    // Move the main view and call displayShareSheet when the view reaches a certain position
+    // Move the main view and call displayShareSheet or resetMainLayout when the view reaches a certain position
     private func dragView(gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: mainLayout)
         
@@ -139,14 +139,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPopov
             mainLayout.transform = transform
             if translation.y < -115 {
                 displayShareSheet()
+            } else if translation.y > 115 {
+                mainLayout.resetMainLayout()
             }
         case .landscapeLeft ,.landscapeRight:
             let transform = CGAffineTransform(translationX: translation.x, y: 0)
             mainLayout.transform = transform
             if translation.x < -115 {
                 displayShareSheet()
-            }
-        default:
+            } else if translation.x > 115 {
+                mainLayout.resetMainLayout()
+            }        default:
             break
         }
     }

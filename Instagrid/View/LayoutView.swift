@@ -115,4 +115,14 @@ class LayoutView: UIView {
             break
         }
     }
+    
+    // Reset the main view
+    func resetMainLayout() {
+        var cpt: Int = 0
+        while cpt < gridView.count {
+            gridButton[cpt].setImage(#imageLiteral(resourceName: "Plus"), for: UIControl.State.normal)
+            gridImageView[cpt].image = nil
+            cpt += 1
+        }
+    }
 }

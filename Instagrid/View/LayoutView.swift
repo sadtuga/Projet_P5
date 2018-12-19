@@ -84,15 +84,15 @@ class LayoutView: UIView {
         switch layout {
         case .layoutOne:
             setGrid(layout)
-            value = indexSelected(layout: 1)
+            value = indexSelected(layout: 0)
             setSelected(index: value)
         case .layoutTwoo:
             setGrid(layout)
-            value = indexSelected(layout: 2)
+            value = indexSelected(layout: 1)
             setSelected(index: value)
         case .layoutThree:
             setGrid(layout)
-            value = indexSelected(layout: 3)
+            value = indexSelected(layout: 2)
             setSelected(index: value)
         }
     }

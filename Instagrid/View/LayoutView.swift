@@ -66,18 +66,34 @@ class LayoutView: UIView {
         selected[index].isHidden = false
     }
     
+    // Returns the index of the image according to the received parameter
+    private func indexSelected(layout: Int) -> Int {
+        var cpt: Int = 0
+        while cpt < selected.count {
+            if selected[cpt].tag == layout {
+                return cpt
+            }
+            cpt += 1
+        }
+        return -1
+    }
+    
     // Change the layout value according to the received parameter value
     private func setLayout(_ layout: layoutPreset) {
+        var value: Int = 0
         switch layout {
         case .layoutOne:
             setGrid(layout)
-            setSelected(index: 2)
+            value = indexSelected(layout: 1)
+            setSelected(index: value)
         case .layoutTwoo:
             setGrid(layout)
-            setSelected(index: 0)
+            value = indexSelected(layout: 2)
+            setSelected(index: value)
         case .layoutThree:
             setGrid(layout)
-            setSelected(index: 1)
+            value = indexSelected(layout: 3)
+            setSelected(index: value)
         }
     }
     

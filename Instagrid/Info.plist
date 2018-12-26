@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>L&apos;application a besoin d&apos;accéder à la caméra de votre appareil</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>L&apos;application a besoin d&apos;accéder à la library de votre appareil</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -28,6 +24,10 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>L&apos;application a besoin d&apos;acceder a vos photos.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>L&apos;application a besoin d&apos;acceder a l&apos;apareil photo.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

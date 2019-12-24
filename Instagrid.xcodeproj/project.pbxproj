@@ -137,6 +137,7 @@
 				TargetAttributes = {
 					A079815F21C9542100EE4769 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -335,7 +336,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarquesLucas.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -353,7 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MarquesLucas.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

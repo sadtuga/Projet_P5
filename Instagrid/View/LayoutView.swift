@@ -18,6 +18,7 @@ class LayoutView: UIView {
     @IBOutlet private var gridImageView: [UIImageView]! // Contains the UIImageView of the main view
     @IBOutlet private var selected: [UIImageView]!      // Contains the UIImageView of the layout selector button
     
+    
     // Contains the active layout
     var layout: layoutPreset = .layoutOne {
         didSet {
